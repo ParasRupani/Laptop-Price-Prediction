@@ -60,7 +60,7 @@ def get_headers():
     return headers
 
 # Creating file for the dataset
-filename = f"laptops_amazon_{CURRENCY}.json"
+filename = f"../data/{CURRENCY}_laptops.json"
 if not os.path.exists(filename):
     open(filename, 'w').close()
 
