@@ -1,12 +1,14 @@
-import streamlit as st
-import pickle
-import pandas as pd
-import joblib
 from scipy.special import inv_boxcox
-from scipy.stats import boxcox_normmax
+import streamlit as st
+import pickle, joblib
+import pandas as pd
+
+
+# Load the saved model
+# pipe = load_model('./DataProcessing/improved_deep_learning_model.h5')
 
 # Load the trained model pipeline and the DataFrame used for training (for categories)
-with open('./DataProcessing/best_random_forest_model.pkl', 'rb') as model_file:
+with open('./models/best_random_forest_model.pkl', 'rb') as model_file:
     pipe = joblib.load(model_file)
 df = pickle.load(open('df.pkl', 'rb'))
 
@@ -22,24 +24,24 @@ with col1:
     laptop_type = st.selectbox('Type', df['Laptop_Type'].unique())
     refurbished = st.selectbox('Refurbished', ['No', 'Yes'])
     os_name = st.selectbox('OS', df['OS_Name'].unique())
-    color = st.selectbox('Color', df['base_color'].unique())
 
 with col2:
-    ram = st.selectbox('RAM (in GB)', [2, 4, 6, 8, 12, 16, 24, 32, 64])
     cpu_brand = st.selectbox('CPU Brand', df['Processor Brand'].unique())
     cpu_type = st.selectbox('CPU Type', df['ProcessorManufacturer'].unique())
     cpu_speed = st.number_input('Processor Speed (GHz)', min_value=0.1, max_value=5.0, step=0.1)
+    primary_memory = st.selectbox('Primary Memory Type', df['Hard Disk Description'].unique())
     
 with col3:
+    ram = st.selectbox('System RAM (GB)', [2, 4, 6, 8, 12, 16, 24, 32, 64])
     gpu_brand = st.selectbox('GPU Brand', df['Graphics_Coprocessor_Brand'].unique())
-    gpu_memory = st.selectbox('GPU Memory (in GB)', [2, 4, 6, 8, 12, 16])
-    primary_memory = st.selectbox('Primary Memory Type', df['Hard Disk Description'].unique())
+    gpu_memory = st.selectbox('GPU VRAM (GB)', [0, 2, 4, 6, 8, 12, 16])
     memory_type = st.selectbox('Memory Type', df['Memory Technology'].unique())
 
 with col4:    
     screen_size = st.number_input('Screen Size (in inches)', min_value=10.0, max_value=20.0, step=0.1)
     resolution = st.selectbox('Screen Resolution', ['1920x1080', '1366x768', '1600x900', '3840x2160', '3200x1800', '2880x1800', '2560x1600', '2560x1440', '2304x1440'])
     weight = st.number_input('Weight of the Laptop (kg)', min_value=0.5, max_value=10.0, step=0.1)
+    color = st.selectbox('Color', df['base_color'].unique())
 
 # Button to make predictions
 if st.button('Predict Price'):
