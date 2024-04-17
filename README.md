@@ -28,9 +28,9 @@
 
 
 <!-- PROJECT LOGO -->
-<!-- <br />
+<br />
 <div align="center">
-  <a href="https://github.com/ParasRupani/Laptop-Price-Prediction">
+  <!-- <a href="https://github.com/ParasRupani/Laptop-Price-Prediction">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a> -->
 
@@ -42,9 +42,9 @@
     <a href="https://github.com/github_username/repo_name"><strong>Explore the Live Application »</strong></a>
     <br />
     <!-- <br />
-    <a href="https://github.com/github_username/repo_name">Live Demonstration</a> -->
+    <a href="https://github.com/github_username/repo_name">Live Demonstration</a>
     ·
-    <!-- <a href="https://github.com/github_username/repo_name/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/github_username/repo_name/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
     <a href="https://github.com/github_username/repo_name/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a> -->
   </p>

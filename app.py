@@ -3,7 +3,6 @@ import streamlit as st
 import pickle, joblib
 import pandas as pd
 
-
 # Load the saved model
 # pipe = load_model('./DataProcessing/improved_deep_learning_model.h5')
 
@@ -20,7 +19,7 @@ st.title("Laptop Price Predictor")
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    company = st.selectbox('Brand', df['Brand'].unique())
+    company = st.selectbox('Brand', df['Brand'].str.capitalize().unique())
     laptop_type = st.selectbox('Type', df['Laptop_Type'].unique())
     refurbished = st.selectbox('Refurbished', ['No', 'Yes'])
     os_name = st.selectbox('OS', df['OS_Name'].unique())
