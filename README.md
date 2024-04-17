@@ -131,7 +131,7 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    pip install -r requirements.txt
    ```
-3. Execute `app.py` using streamlit
+3. Execute `streamlit_app.py` using streamlit
    ```sh
    streamlit run app.py
    ```
@@ -154,20 +154,29 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Steps Involved
 
-- [ ] Data Collection
-- BeautifulSoup
+- [x] Data Collection
+  - BeautifulSoup
+<br>
+- [x] Data Visualisations
+  - Matplotlib
+  - Plotly
+  - Seaborn
   <br>
-- [ ] Data Preprocessing
-- Pandas
-- Numpy
+- [x] Data Preprocessing
+  - Pandas
+  - Numpy
   <br>
-- [ ] Model Training
-- Scikit-Learn
+- [x] Model Training
+  - Scikit-Learn
+  - TensorFlow
   <br>
-- [ ] Model Evaluation
+- [x] Model Evaluation
+  - R Squared-Score
+  - Mean Absolute Error
+  - Mean Squared Error
   <br>
-- [ ] Deployment
-- Streamlit
+- [x] Deployment
+  - Streamlit
 
 <!-- See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues). -->
 
