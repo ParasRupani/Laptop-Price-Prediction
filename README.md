@@ -158,9 +158,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
   - BeautifulSoup
 <br>
 - [x] Data Visualisations
-  - Matplotlib
-  - Plotly
-  - Seaborn
+      - Matplotlib
+      - Plotly
+      - Seaborn
 <br>
 - [x] Data Preprocessing
   - Pandas
