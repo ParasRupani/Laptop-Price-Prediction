@@ -161,20 +161,20 @@ _For more examples, please refer to the [Documentation](https://example.com)_
   - Matplotlib
   - Plotly
   - Seaborn
-  <br>
+<br>
 - [x] Data Preprocessing
   - Pandas
   - Numpy
-  <br>
+<br>
 - [x] Model Training
   - Scikit-Learn
   - TensorFlow
-  <br>
+<br>
 - [x] Model Evaluation
   - R Squared-Score
   - Mean Absolute Error
   - Mean Squared Error
-  <br>
+<br>
 - [x] Deployment
   - Streamlit
 
